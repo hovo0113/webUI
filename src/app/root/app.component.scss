@@ -1,0 +1,170 @@
+.card {
+  width: 70%;
+  height: 80%;
+  margin: auto;
+  background-color: #FFFFFF;
+  padding: {
+    top: 50px;
+    left: 50px;
+    right: 50px;
+    bottom: 20px;
+  }
+;
+  box-shadow: none;
+
+  & mat-card-content {
+    height: 100%;
+  }
+
+  & .navigation-items {
+    width: 100%;
+    list-style: none;
+
+    & mat-list-item {
+      width: 153px;
+      height: 45px;
+      text-align: center;
+      padding: 0;
+      font: {
+        size: 10px;
+      }
+
+      & span::first-letter {
+        font-size: 14px;
+      }
+    }
+  }
+
+  & .big_round {
+    min-width: 350px;
+    min-height: 350px;
+    position: relative;
+    background-image: url("../../assets/imgdsa.png");
+    background-position: center;
+    background-size: cover;
+    border-radius: 100%;
+
+    .estrellas {
+      position: relative;
+      width: 100px;
+      height: 300px;
+      margin: 0 auto;
+      font-size: 20px;
+    }
+    .estrellas span {
+      position: absolute;
+      top: 0;
+      right: 40px;
+      width: 20px;
+      height: 170px;
+      color: #FFFFFF;
+      line-height: 0; /* height*2 - font-size */
+      text-align: center;
+      transform-origin: top center;
+    }
+    $x: 143 ;
+    @for $i from 1 to 9 {
+      $x: $x - 5;
+      .estrellas span:nth-of-type(#{$i}) {
+        transform: rotate($x + deg);
+      }
+    }
+
+    $x: 100 ;
+    @for $i from 9 to 11{
+      $x: $x - 5;
+      .estrellas span:nth-of-type(#{$i}) {
+        transform: rotate($x + deg);
+      }
+    }
+
+    $x: 88 ;
+    @for $i from 11 to 17{
+      $x: $x - 5;
+      .estrellas span:nth-of-type(#{$i}) {
+        transform: rotate($x + deg);
+      }
+    }
+
+    $x: -55 ;
+    @for $i from 17 to 20 {
+      $x: $x - 5;
+      .estrellas span:nth-of-type(#{$i}) {
+        transform: rotate($x + deg);
+      }
+    }
+
+    $x: -72 ;
+    @for $i from 20 to 22 {
+      $x: $x - 5;
+      .estrellas span:nth-of-type(#{$i}) {
+        transform: rotate($x + deg);
+      }
+    }
+
+    $x: -84 ;
+    @for $i from 22 to 30 {
+      $x: $x - 5;
+      .estrellas span:nth-of-type(#{$i}) {
+        transform: rotate($x + deg);
+      }
+    }
+    /* Reverse mode */
+    .inverso {
+      font-weight: normal;
+    }
+    .inverso span {
+      line-height: 17px;
+      text-transform: uppercase;
+      transform-origin: bottom center;
+    }
+
+    @for $i from 1 to 7 {
+      .nav-item-#{$i} {
+        position: absolute;
+        text-transform: uppercase;
+
+        &::first-letter {
+          font-size: 20px;
+        }
+      }
+    };
+
+    .nav-item-1 {
+      left: 100px;
+      top: 90px
+    }
+
+    .nav-item-2 {
+      left: 200px;
+      top: 90px
+    }
+
+    .nav-item-3 {
+      left: 70px;
+      top: 160px
+    }
+
+    .nav-item-4 {
+      left: 230px;
+      top: 160px
+    }
+
+    .nav-item-5 {
+      left: 100px;
+      bottom: 90px
+    }
+
+    .nav-item-6 {
+      left: 190px;
+      bottom: 90px
+    }
+
+    .icon {
+      font-size: 12px;
+      color: red;
+      margin-left: 10px;
+      cursor: pointer;
+    }
+  }
+}

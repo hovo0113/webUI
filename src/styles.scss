@@ -2,3 +2,23 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+@media (min-width: 320px) and (max-width: 1200px) {
+  .card {
+    width: 100% !important;
+    padding: 0 !important;
+
+    & .navigation-items {
+      & mat-list-item {
+        width: 103px !important;
+      }
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width: 500px) {
+  mat-list {
+    flex-wrap: wrap;
+  }
+}
